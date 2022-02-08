@@ -1,0 +1,29 @@
+<div>
+    <div class="headingBlock">
+        <p>Search For Users</p>    
+        <div class="searchBlock">
+            <input [(ngModel)]="choiceValue" type="text" name="choiceValue" placeholder="Enter To Search" required/>
+            <label>Select Search Mode : <select [(ngModel)]="findChoice" >
+                <option value="id">ID</option>
+                <option value="fname">First Name</option>
+                <option value="lname">Last Name</option>
+                <option value="pincode">Pincode</option>
+            </select>
+            </label>
+            <button (click)="searchAndChangeList()">SEARCH</button>
+        </div>
+    </div>
+    
+
+    <div class="listContainer" *ngIf='users.length > 0; else errorBlock'>
+        
+        <div *ngFor='let user of users'>
+            <app-info-card [user]='user'></app-info-card>
+        </div>
+            
+    </div>
+    
+    <ng-template #errorBlock>
+        <div class="error">No such User</div>
+    </ng-template>
+</div>

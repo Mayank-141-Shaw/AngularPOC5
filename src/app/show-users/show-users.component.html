@@ -1,0 +1,16 @@
+<div>
+    <div class="headingBlock">
+        <p>Show All Users</p>
+        <button (click)="changeList()" mat-button><mat-icon>sort</mat-icon> {{ !sortByDob ? "Sort By ID" : "Sort By DOB and DOJ" }}</button>
+    </div>
+    <div class="listContainer" *ngIf='users.length > 0; else errorBlock'>
+        
+        <div *ngFor='let user of users'>
+            <app-info-card [user]='user'></app-info-card>
+        </div>
+            
+    </div>
+    <ng-template #errorBlock>
+        <div>User List empty</div>
+    </ng-template>
+</div>

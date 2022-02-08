@@ -1,0 +1,20 @@
+.row{
+    display: flex;
+    flex-direction: row;
+    font-family: monospace;
+    height: auto;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.page-layout{
+    width: 85vw;
+}
+
+main{
+    min-height: 70vh;
+    background: rgb(173, 194, 233);
+}

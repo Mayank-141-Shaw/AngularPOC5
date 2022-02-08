@@ -1,0 +1,57 @@
+.listContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.headingBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: uppercase;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.searchBlock{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+    justify-content: center;
+    background-color: lightcoral;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+.headingBlock p{
+    font-size: 30px;
+    margin: auto 0px;
+}
+
+li{
+    list-style-type: none;
+}
+
+.headingBlock button{
+    padding: 5px;
+    background-color: darkslateblue;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    margin: 2px 10px;
+    font-size: large;
+    cursor: pointer;
+}
+
+.error{
+    text-align: center;
+    background-color: lightsalmon;
+    padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}

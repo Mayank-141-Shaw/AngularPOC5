@@ -1,0 +1,23 @@
+<div class="info-card" [ngStyle]="{'background-color': user.deleted ? 'red' : 'green'}">
+    <div class="column">
+        <label>ID : <span>{{user.id}}</span></label>
+        <label>Firstname : <span>{{user.firstname}}</span></label>
+        <label>Surname : <span>{{user.surname}}</span></label>
+        <label>City : <span>{{user.city}}</span></label>
+    </div>
+    <div class="column">
+        <label>Pincode : <span>{{user.pincode}}</span></label>
+        <label>Salary : <span>Rs {{user.salary}}</span></label>
+        <label>DOJ : <span>{{doj}}</span></label>
+        <label>DOB : <span>{{dob}}</span></label>
+    </div>
+    <div class="column btnColumn">
+        <button (click)='softDelete()' mat-button style="background-color: goldenrod;"><mat-icon>delete</mat-icon> Soft Delete</button>
+        <mat-divider></mat-divider>
+        <button (click)='unSoftDelete()' mat-button style="background-color: indianred;"><mat-icon>undo</mat-icon>  UnSoft Delete</button>
+        <mat-divider></mat-divider>
+        <button (click)='delete()' mat-button style="background-color: darkred;"><mat-icon>cancel</mat-icon>  Delete</button>
+        <mat-divider></mat-divider>
+        <button (click)='update()' mat-button style="background-color: lightseagreen;"><mat-icon>update</mat-icon>  Update</button>
+    </div>
+</div>
